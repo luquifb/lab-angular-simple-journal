@@ -32,6 +32,7 @@ app.use(layouts);
 const index = require('./routes/index');
 app.use('/', index);
 
+
 app.all('/*', function (req, res) {
   res.sendfile(__dirname + '/public/index.html');
 });
