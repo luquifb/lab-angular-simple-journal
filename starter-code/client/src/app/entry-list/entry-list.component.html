@@ -1,0 +1,10 @@
+<h1>Entry list</h1>
+
+<div>
+  <div *ngFor="let entry of entries">
+    <h3>{{ entry.title }}</h3>
+    <p> {{ entry.date | date: "yyyy-mm-dd" }}</p>
+    <a [routerLink]="['/api/journal-entries', entry._id]">Entry Detail </a>
+  </div>
+
+</div>
